@@ -1,6 +1,9 @@
 import React from 'react';
 
+import SellerInfo from '../SellerInfo';
+
 import tshistImage from '../../assets/tshirt.png';
+
 import {
   Container,
   Row,
@@ -30,7 +33,8 @@ const Product:React.FC = () => {
 
         <Column>
           {/* <ProductAction /> */}
-          {/* <SellerInfo /> */}
+
+          <SellerInfo />
 
           <WarrantySection />
           <WarrantySection />
