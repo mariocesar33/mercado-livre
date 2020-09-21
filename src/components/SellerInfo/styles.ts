@@ -60,20 +60,99 @@ export const ReputationCard = styled.div`
 `;
 
 export const ReputationThermometer = styled.ol`
+  align-items: center;
   /* para tirar o list-style para não ficar os numeros */
   list-style: none;
 
   width: 100%;
   /* grid porque valos colocar 5 barras um ao lado do outro */
   display: grid;
-  /* 5 barinha um ao lado do outro */
+  /* 5 barinha um ao lado do outro, 20% para cada, ou seja, 1fr cada */
+  grid-template-columns: repeat(5, 1fr);
+
+  grid-gap: 7px;
+  padding: 0 4px;
+
+  > li {
+    width: 100%;
+    height: 8px;
+
+    /* devinir a cores para cada para */
+    &:nth-child(1) {
+      background: var(--reputation-1);
+    }
+    &:nth-child(2) {
+      background: var(--reputation-2);
+    }
+    &:nth-child(3) {
+      background: var(--reputation-3);
+    }
+    &:nth-child(4) {
+      background: var(--reputation-4);
+    }
+    &:nth-child(5) {
+      background: var(--reputation-5);
+    }
+
+    &.active {
+      height: 12px;
+    }
+  }
 `;
 
-export const ReputationRow = styled.div``;
+export const ReputationRow = styled.div`
+  margin-top: 10px;
 
-export const SupportIcon = styled(HiOutlineChatAlt2)`${iconCSS}`;
+  display: flex;
+  align-items: flex-start;
 
-export const ClockIcon = styled(HiOutlineClock)`${iconCSS}`;
+  > div {
+    width: 33%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 
-export const More = styled.a``;
+    > strong {
+      font-size: 24px;
+      font-weight: normal;
+      height: 30px;
+    }
+    > span {
+      font-size: 12px;
+    }
+
+    position: relative;
+
+    /* apartir de segundo div cada um vai ter uma borda para esquerda */
+    & + div {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 36px;
+        border-left: 1px solid var(--color-border);
+      }
+    }
+  }
+`;
+
+export const SupportIcon = styled(HiOutlineChatAlt2)`
+  ${iconCSS}
+`;
+
+export const ClockIcon = styled(HiOutlineClock)`
+  ${iconCSS}
+`;
+
+export const More = styled.a`
+  margin-top: 24px;
+  color: var(--color-blue);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+`;
 
