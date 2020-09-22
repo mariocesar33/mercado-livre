@@ -1,8 +1,8 @@
 import React from 'react';
 
-import SellerInfo from '../SellerInfo';
-
 import tshistImage from '../../assets/tshirt.png';
+import SellerInfo from '../SellerInfo';
+import ProductAction from '../ProductAction';
 
 import {
   Container,
@@ -13,6 +13,7 @@ import {
   Section,
   Description
 } from './styles';
+
 
 const Product:React.FC = () => {
   return(
@@ -32,7 +33,7 @@ const Product:React.FC = () => {
         </Column>
 
         <Column>
-          {/* <ProductAction /> */}
+          <ProductAction />
 
           <SellerInfo />
 
