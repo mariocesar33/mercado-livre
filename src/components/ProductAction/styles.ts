@@ -5,32 +5,90 @@ import {
   HiOutlineShieldCheck
 } from 'react-icons/hi';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+`;
 
-export const Condition = styled.div``;
+export const Condition = styled.div`
+  font-size: 14px;
+  color: var(--color-gray);
+  margin-bottom: 16px;
+`;
 
-export const Row = styled.div``;
+export const Row = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  > h1 {
+    width: 100%;
+    font-size: 26px;
+    font-weight: 600;
+  }
+`;
 
 export const HeartIcon = styled(HiOutlineHeart)`
   width: 28px;
   height: 28px;
   color: var(--color-blue);
+  flex-shrink: 0;
 
   margin-left: 16px;
   cursor: pointer;
 `;
 
-export const Dispatchtag = styled.div``;
+export const Dispatchtag = styled.div`
+  margin-top: 12px;
+  background: var(--color-blue);
+  color: var(--color-white);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  /* para o meu fonte ocupar apenas o espaço necessario  */
+  width: fit-content;
+`;
 
-export const PriceCard = styled.div``;
+export const PriceCard = styled.div`
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+`;
 
-export const PriceRow = styled.div``;
+export const PriceRow = styled.div`
+  display: flex;
+  align-items: flex-start;
+  font-size: 44px;
+  font-weight: 300;
 
-export const InstallmentsInfo = styled.div``;
+  .fraction {
+    margin-left: 8.8px;
+  }
+  .cents {
+    font-size: 20px;
+    padding-top: 3px;
+    margin-left: 1px;
+  }
+`;
 
-export const StockStatus = styled.div``;
+export const InstallmentsInfo = styled.div`
+  font-size: 16px;
+`;
 
-export const MethodCard = styled.div``;
+export const StockStatus = styled.div`
+  margin-top: 24px;
+  font-size: 18px;
+`;
+
+export const MethodCard = styled.div`
+  margin-top: 18px;
+  display: flex;
+
+  > div {
+
+  }
+`;
 
 export const CheckIcon = styled(HiOutlineCheck)`
   width: 24px;
