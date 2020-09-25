@@ -9,13 +9,13 @@ import { Container, Wrapper } from './styles';
 const Layout: React.FC = () => {
   return(
     <Container>
-      {/* <Header /> */}
+      <Header />
 
       <Wrapper>
         <Product />
       </Wrapper>
 
-      {/* <Footer /> */}
+      <Footer />
     </Container>
   );
 }

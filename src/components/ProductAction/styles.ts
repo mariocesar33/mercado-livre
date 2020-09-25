@@ -86,7 +86,26 @@ export const MethodCard = styled.div`
   display: flex;
 
   > div {
+    margin-left: 8px;
+    display: flex;
+    flex-direction: column;
 
+    .title {
+      color: var(--color-green);
+      font-size: 16px;
+    }
+    .details {
+      margin-top: 5px;
+      color: var(--color-gray);
+      font-size: 14px;
+    }
+    .more {
+      margin-top: 5px;
+      color: var(--color-blue);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
   }
 `;
 
@@ -96,13 +115,47 @@ export const CheckIcon = styled(HiOutlineCheck)`
   color: var(--color-green);
 `;
 
-export const Actions = styled.div``;
+export const Actions = styled.div`
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+`;
 
 type ButtonProps = { solid?: boolean };
 
-export const Button = styled.button<ButtonProps>``;
+export const Button = styled.button<ButtonProps>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-export const Benefits = styled.div``;
+  font-size: 15px;
+  border-radius: 4px;
+  padding: 12px 10px;
+  margin-top: 10px;
+
+  color: ${props => props.solid ? 'var(--color-white)' : 'var(--color-blue)'};
+  background: ${props => props.solid ? 'var(--color-blue)' : 'transparent'};
+  border: ${props => props.solid ? 'none' : '1px solid var(--color-blue)'};
+
+  cursor: pointer;
+`;
+
+export const Benefits = styled.ul`
+  margin-top: 16px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  > li {
+    display: flex;
+
+    > p {
+      margin-left: 10px;
+      color: var(--color-gray);
+      font-size: 14px;
+    }
+  }
+`;
 
 export const ShieldIcon = styled(HiOutlineShieldCheck)`
   width: 20px;
